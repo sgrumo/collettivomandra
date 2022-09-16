@@ -269,7 +269,7 @@ export const store = configureStore({
 });
 ```
 
-The project now supports <a href="https://www.npmjs.com/package/openapi-typescript-codegen">RTK Query</a>.
+The project now supports <a href="https://redux-toolkit.js.org/rtk-query/overview">RTK Query</a>.
 The main ```apiSlice.ts``` file is located inside ```state > slices``` and it is ready to go. You just have to add your api slices inside ```state > slices > api``` in order to match your needs. I've provided an example of a query (```state > slices > api > dataApiSlice.ts``) and a mutation (```state > slices > api > authApiSlice.ts``) to speed up the coding process.
 
 
