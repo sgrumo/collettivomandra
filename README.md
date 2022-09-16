@@ -70,7 +70,7 @@ Otherwise, you can contact me at my e-mail:
 
 ##
 
-This projects is currently using Next.js version 12.1.6 
+This projects is currently using Next.js version 12.3.0
 
 If you want to donwgrade Next.js to increase compatibility with deployment systems, you can follow the official guide, taking care to carry out the steps in reverse: [https://nextjs.org/docs/upgrading](https://nextjs.org/docs/upgrading)
 
