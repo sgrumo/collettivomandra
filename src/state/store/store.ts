@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import localStorage from "localstorage-slim";
-import thunk from "redux-thunk";
+import { apiSlice } from "../slices/apiSlice";
 import { ErrorReducers } from "../slices/errors";
 import testReducers from "../slices/testSlice";
 
@@ -23,8 +23,10 @@ export const store = configureStore({
   reducer: {
     test: testReducers,
     errors: ErrorReducers,
+    [apiSlice.reducerPath]: apiSlice.reducer,
   },
-  middleware: [thunk],
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(apiSlice.middleware),
 });
 
 store.subscribe(() => {
