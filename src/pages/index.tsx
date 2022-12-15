@@ -1,9 +1,12 @@
 import type { NextPage } from "next";
+import Header from "../components/Header";
+import Main from "../components/Main";
 
 const Home: NextPage = () => {
   return (
     <div className="h-screen w-screen">
-      <p>Welcome to Next.js Boilerplate!</p>
+      <Header />
+      <Main />
     </div>
   );
 };

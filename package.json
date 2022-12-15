@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run generate-api && next dev",
-    "build": "npm run generate-api && next build",
-    "start": "npm run generate-api && next start",
-    "lint": "npm run generate-api && next lint",
-    "generate-api": "openapi -i src/api/openapi.yml -o src/api/generated"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
+    "@u-wave/react-vimeo": "^0.9.10",
     "axios": "^0.27.2",
     "next": "^12.3.1",
+    "next-seo": "^5.15.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
