@@ -10,18 +10,10 @@
     "generate-api": "openapi -i src/api/openapi.yml -o src/api/generated"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.8.6",
-    "aws-sdk": "^2.1233.0",
     "axios": "^0.27.2",
-    "localstorage-slim": "^2.3.0",
     "next": "^12.3.1",
-    "openapi-typescript": "^5.4.1",
-    "openapi-typescript-codegen": "^0.23.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-redux": "^8.0.4",
-    "redux": "^4.2.0",
-    "redux-thunk": "^2.4.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.0",
