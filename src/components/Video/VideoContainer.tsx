@@ -1,16 +1,22 @@
-import { useState } from "react";
 import { videoData } from "../../../data/video";
+import { VideoInformation } from "../../models/models";
 import Preview from "./Preview";
 
-const VideoContainer = () => {
-  const [selectedVideo, setSelectedVideo] = useState<string>();
+interface VideoContainerProps {
+  selectedVideo?: VideoInformation;
+  selectVideo: (video: VideoInformation) => void;
+}
 
+const VideoContainer = ({
+  selectedVideo,
+  selectVideo,
+}: VideoContainerProps) => {
   const videos = videoData.map((video, index) => (
     <Preview
       video={video}
       key={index}
       selectedVideo={selectedVideo}
-      selectVideo={(id) => setSelectedVideo(id)}
+      selectVideo={(id) => selectVideo(video)}
     />
   ));
   return <section className="video-container">{videos}</section>;

@@ -1,9 +1,15 @@
+import { VideoInformation } from "../models/models";
 import VideoContainer from "./Video/VideoContainer";
 
-const Main = () => {
+interface VideoContainerProps {
+  selectedVideo?: VideoInformation;
+  selectVideo: (video: VideoInformation) => void;
+}
+
+const Main = (props: VideoContainerProps) => {
   return (
     <main>
-      <VideoContainer />
+      <VideoContainer {...props} />
     </main>
   );
 };

@@ -3,14 +3,14 @@ import { VideoInformation } from "../../models/models";
 
 interface PreviewProps {
   video: VideoInformation;
-  selectedVideo?: string;
+  selectedVideo?: VideoInformation;
   selectVideo: (id: string) => void;
 }
 const Preview = ({ video, selectedVideo, selectVideo }: PreviewProps) => {
   return (
     <div
       className={`video-preview ${
-        selectedVideo !== undefined && selectedVideo === video.id
+        selectedVideo !== undefined && selectedVideo.id === video.id
           ? "video-preview-outline"
           : ""
       }`}
