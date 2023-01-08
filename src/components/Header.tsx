@@ -6,7 +6,7 @@ interface HeaderProps {
 
 const Header = ({ selectedVideo }: HeaderProps) => {
   return (
-    <header className={`first-letter: min-h-[30vh]`}>
+    <header className={`first-letter pt-4 pb-8`}>
       <h1 className="principal-heading">COLLETTIVO MANDRA</h1>
     </header>
   );
