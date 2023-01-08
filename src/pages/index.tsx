@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   const [selectedVideo, setSelectedVideo] = useState<VideoInformation>();
 
   return (
-    <div className="h-screen w-screen px-4 pt-4">
+    <div className="min-h-screen w-screen">
       <Header selectedVideo={selectedVideo} />
       <Main selectVideo={setSelectedVideo} selectedVideo={selectedVideo} />
     </div>

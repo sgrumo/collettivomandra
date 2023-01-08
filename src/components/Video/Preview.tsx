@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState } from "react";
 import { VideoInformation } from "../../models/models";
 
 interface PreviewProps {
@@ -7,17 +8,12 @@ interface PreviewProps {
   selectVideo: (id: string) => void;
 }
 const Preview = ({ video, selectedVideo, selectVideo }: PreviewProps) => {
+  const [onHover, setOnHover] = useState(false);
+
   return (
-    <div
-      className={`video-preview ${
-        selectedVideo !== undefined && selectedVideo.id === video.id
-          ? "video-preview-outline"
-          : ""
-      }`}
-      onClick={() => selectVideo(video.id)}
-    >
+    <div className="video-preview" onClick={() => selectVideo(video.id)}>
       <Image
-        src={`https://i.vimeocdn.com/video/${video.id}-d_640x360?r=pad`}
+        src={`https://i.vimeocdn.com/video/${video.id}-d?mw=2000&mh=1125&q=70`}
         layout="fill"
         alt={video.title}
       />
