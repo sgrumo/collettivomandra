@@ -11,7 +11,23 @@ module.exports = {
         'zanichelli': "url('https://i.vimeocdn.com/video/1561669232-17bc29438b00f39d488175d6c6e742283b8a0828329037dbad915644609aaa59-d_640x360?r=pad')",
         'tassoni': "url('https://i.vimeocdn.com/video/1561666027-027a92237e5c439f64030a517a604553577c20c29ef226928e063aabe247f3e1-d_640x360?r=pad')",
         'subme': "url('https://i.vimeocdn.com/video/1561668121-e8535cdd53d2afcfbb9cae3a44369e714b2e3d5b03bb8f31e6e67e84f69d5d4e-d_640x360?r=pad')",
-      }
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        marquee2: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+      },
+      animation: {
+        'spin-slow-30': 'spin 30s linear infinite',
+        'spin-slow-25': 'spin 25s linear infinite',
+        'spin-slow-10': 'spin 10s linear infinite',
+        'marquee-infinite': 'marquee 35s linear infinite',
+      },
     },
   },
   plugins: [],

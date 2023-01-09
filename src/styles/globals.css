@@ -3,16 +3,23 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Kenyan";
-  src: url("/assets/fonts/kenyan_bold.ttf");
+  font-family: "Antonio";
+  src: url("/assets/fonts/Antonio-Bold.ttf");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Kenyan";
-  src: url("/assets/fonts/kenyan_regular.ttf");
+  font-family: "Antonio";
+  src: url("/assets/fonts/Antonio-Regular.ttf");
   font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Antonio";
+  src: url("/assets/fonts/Antonio-SemiBold.ttf");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -22,29 +29,38 @@
   }
 
   .video-preview {
-    @apply relative h-64;
+    @apply relative h-64 cursor-pointer;
   }
 
   .video-preview-outline {
     @apply outline outline-1 outline-blue-500;
   }
 
+  .centered-absolute {
+    @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%];
+  }
+
   .video-text-container {
-    @apply absolute top-[50%] left-[50%] flex translate-x-[-50%] translate-y-[-50%] flex-col text-center;
+    @apply centered-absolute absolute flex flex-col text-center;
   }
   .video-preview-title {
-    @apply text-xl;
+    @apply z-10 text-3xl text-white;
   }
   .video-preview-type {
-    @apply text-lg;
+    @apply centered-absolute absolute z-20 text-3xl text-white;
   }
 
   .principal-heading {
-    @apply text-center text-7xl font-bold;
+    @apply text-center text-7xl font-bold md:text-9xl;
   }
 
   .clients-container {
-    @apply grid grid-cols-2 gap-x-8 gap-y-8 px-12 py-4 md:grid-cols-3 lg:grid-cols-4;
+    /* @apply grid grid-cols-2 gap-x-8 gap-y-8 px-12 py-4 md:grid-cols-3 lg:grid-cols-4; */
+    @apply absolute left-0 flex gap-x-48 md:gap-x-[47rem] lg:gap-x-[61rem] xl:gap-x-[79rem];
+  }
+
+  .client-container {
+    @apply h-[4rem] min-w-[4rem] md:h-[4rem] md:min-w-[6rem] lg:h-[8rem] lg:min-w-[8rem] xl:h-[10rem] xl:min-w-[10rem];
   }
 }
 
@@ -54,8 +70,9 @@ body {
   margin: 0;
   font-weight: 400;
   color: white;
-  background-color: #1e1e1e;
-  font-family: "Kenyan", Helvetica, Arial, sans-serif;
+  background-color: white;
+  color: #1e1e1e;
+  font-family: "Antonio", Helvetica, Arial, sans-serif;
   width: 100vw;
   max-width: 100%;
   min-width: 100%;
