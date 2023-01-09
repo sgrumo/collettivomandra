@@ -60,7 +60,7 @@
   }
 
   .client-container {
-    @apply h-[4rem] min-w-[4rem] md:h-[4rem] md:min-w-[6rem] lg:h-[8rem] lg:min-w-[8rem] xl:h-[10rem] xl:min-w-[10rem];
+    @apply h-[4rem] min-w-[4rem] md:h-[4rem] md:min-w-[6rem] lg:h-[8rem] lg:min-w-[8rem] xl:h-[9em] xl:min-w-[9em];
   }
 }
 

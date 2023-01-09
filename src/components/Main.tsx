@@ -9,7 +9,7 @@ interface VideoContainerProps {
 
 const Main = (props: VideoContainerProps) => {
   return (
-    <main>
+    <main className="min-h-screen">
       <VideoContainer {...props} />
       <Clients />
     </main>
